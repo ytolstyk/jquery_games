@@ -1,0 +1,32 @@
+<!DOCTYPE html>   
+<html>
+  <head>
+    <title>Towers of Hanoi</title>
+    <link rel="stylesheet" type="text/css" href="../css/hanoi.css">
+  </head>
+
+  <body>
+    <div class="wrap">
+      <div data-tower="0" class="stack">
+        <div data-len="1" class="tower one"></div>
+        <div data-len="2" class="tower two"></div>
+        <div data-len="3" class="tower three"></div>
+      </div>
+      <div data-tower="1" class="stack"></div>
+      <div data-tower="2" class="stack"></div>
+      <div class="message"></div>
+    </div>
+    
+    <script src="../js/jquery-2.1.1.js"></script>
+    <script src="../js/hanoi-core.js"></script>
+    <script src="../js/hanoi-ui.js"></script>
+    
+    <script>
+    $(function(){
+      var $el = $(".content");
+      var game = new Hanoi.Game();
+      var ui = new Hanoi.UI(game, $el);
+    });
+    </script>
+  </body>
+</html>
